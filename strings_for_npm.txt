@@ -1,0 +1,14 @@
+
+cd web-apps-node-iot-hub-data-visualization
+set IotHubConnectionString=HostName=ph-level-humidity.azure-devices.net;SharedAccessKeyName=service;SharedAccessKey=lX6mxPYPFb/2Gj7pdzFLZXca7Cz9K5Z6ymCEB/jIcIY=
+set EventHubConsumerGroup=consoilgr
+npm start
+
+
+az webapp config appsettings set -n services-for-oil --settings EventHubConsumerGroup=consoilgr IotHubConnectionString="HostName=ph-level-humidity.azure-devices.net;SharedAccessKeyName=service;SharedAccessKey=lX6mxPYPFb/2Gj7pdzFLZXca7Cz9K5Z6ymCEB/jIcIY="
+
+az webapp config appsettings set -n service-for-oil -g implement-oil-sust --settings EventHubConsumerGroup=consoilgr IotHubConnectionString="HostName=ph-level-humidity.azure-devices.net;SharedAccessKeyName=service;SharedAccessKey=lX6mxPYPFb/2Gj7pdzFLZXca7Cz9K5Z6ymCEB/jIcIY="
+
+
+az webapp config set -n <your web app name> -g <your resource group name> --web-sockets-enabled true
+az webapp update -n <your web app name> -g <your resource group name> --https-only true

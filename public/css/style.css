@@ -1,20 +1,65 @@
+@media screen and (min-width: 80rem) {
+  .container {
+    margin: 1em 2em;
+  }
+}
+
+
 body {
+  background-image: url("https://img.freepik.com/free-vector/white-gray-geometric-pattern-background-vector_53876-136510.jpg?t=st=1653265820~exp=1653266420~hmac=92705054972234567782cccbf1b837bf244a9f3c612088937c0d02e7f5c03539&w=826");
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   padding: 50px;
   margin: 0;
   text-align: center;
 }
 
+#recipiente-img {
+  width: 50%;
+  
+}
+
+#senac {
+  width: 20%;
+}
+
+#first {
+  text-align: center;
+}
+
+#pmd {
+ font-size: 35px;
+}
+
+
 .flexHeader {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+  font-size: small;
+  
 }
 
 a {
   color: #00B7FF;
 }
+
+#teste {
+  float: right;
+}
+
+#vol {
+  white-space: pre-wrap;
+}
+
+#boxes {
+ 
+ color: #2D2DE1;
+ text-align: center;
+ font-size: 27px;
+ font-weight: bold;
+}
+
 
 body select {
   padding: 10px 70px 10px 13px;
