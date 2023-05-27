@@ -1,3 +1,6 @@
+
+
+
 $(document).ready(function () {
   $(".dropdown-toggle").dropdown();
   // Adiciona o evento click nos itens do menu suspenso

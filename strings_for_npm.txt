@@ -5,10 +5,6 @@ set EventHubConsumerGroup=consoilgr
 npm start
 
 
-az webapp config appsettings set -n services-for-oil --settings EventHubConsumerGroup=consoilgr IotHubConnectionString="HostName=ph-level-humidity.azure-devices.net;SharedAccessKeyName=service;SharedAccessKey=lX6mxPYPFb/2Gj7pdzFLZXca7Cz9K5Z6ymCEB/jIcIY="
+az webapp create -n oleo-visualizacao -g implement-oil-sust -p plan-ph-humidity --runtime "node|14" --deployment-local-git
 
-az webapp config appsettings set -n service-for-oil -g implement-oil-sust --settings EventHubConsumerGroup=consoilgr IotHubConnectionString="HostName=ph-level-humidity.azure-devices.net;SharedAccessKeyName=service;SharedAccessKey=lX6mxPYPFb/2Gj7pdzFLZXca7Cz9K5Z6ymCEB/jIcIY="
-
-
-az webapp config set -n <your web app name> -g <your resource group name> --web-sockets-enabled true
-az webapp update -n <your web app name> -g <your resource group name> --https-only true
+az webapp config appsettings set -n <your web app name> -g <your resource group name> --settings EventHubConsumerGroup=<your consumer group> IotHubConnectionString="<your IoT hub connection string>"
